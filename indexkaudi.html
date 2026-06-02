@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$2KDI | The Do Kaudi Movement</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Reset & Variables */
+        :root {
+            --bg-color: #050505;
+            --text-main: #ffffff;
+            --text-muted: #888888;
+            --neon-blue: #00f0ff;
+            --neon-green: #39ff14;
+            --card-bg: #111111;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Layout & Containers */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--neon-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 0 80px;
+        }
+
+        .hero-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-bottom: 30px;
+            box-shadow: 0 0 40px rgba(0, 240, 255, 0.3), 0 0 80px rgba(57, 255, 20, 0.2);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .title {
+            font-size: 5rem;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        /* Buttons & Interactions */
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--text-main);
+            color: var(--bg-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--neon-green);
+            box-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
+        }
+
+        .contract-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 50px;
+            background-color: var(--card-bg);
+            padding: 15px 25px;
+            border-radius: 12px;
+            border: 1px solid #222;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ca-text {
+            font-family: monospace;
+            color: var(--neon-blue);
+            font-size: 1rem;
+        }
+
+        .copy-btn {
+            background: none;
+            border: 1px solid #444;
+            color: var(--text-main);
+            padding: 5px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .copy-btn:hover {
+            background: var(--text-main);
+            color: var(--bg-color);
+        }
+
+        /* Grid Sections */
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 50px 0;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid #222;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--neon-blue);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 50px 0;
+            color: var(--text-muted);
+            border-top: 1px solid #222;
+            margin-top: 50px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .title { font-size: 3.5rem; }
+            nav { flex-direction: column; gap: 20px; }
+            .contract-box { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <div class="logo">$2KDI</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#tokenomics">Tokenomics</a>
+                <a href="#" target="_blank">Twitter</a>
+                <a href="#" target="_blank">Telegram</a>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <!-- Replace '2kdi-logo.png' with your actual generated image filename -->
+            <img src="watermarked_img_18048486852718699385.png" alt="$2KDI Logo" class="hero-img">
+            
+            <h1 class="title">0% UTILITY.<br>100% AURA.</h1>
+            <p class="subtitle">The establishment called the internet educators "Do Kaudi" (two cents). We took it personally. A community-driven meme coin backed by students, for the students. Fade the media. Respect the teachers.</p>
+            
+            <a href="#" class="btn btn-primary">Buy on Raydium</a>
+
+            <div class="contract-box">
+                <span>CA:</span>
+                <span class="ca-text" id="ca">YOUR_CONTRACT_ADDRESS_GOES_HERE</span>
+                <button class="copy-btn" onclick="copyCA()">Copy</button>
+            </div>
+        </section>
+
+        <!-- Tokenomics Section -->
+        <section id="tokenomics" class="grid">
+            <div class="card">
+                <h3>Fair Launch 🚀</h3>
+                <p>No presale, no insider allocations, no team tokens. The future of education belongs to everyone, and so does this coin.</p>
+            </div>
+            <div class="card">
+                <h3>Zero Taxes 💎</h3>
+                <p>0% buy tax. 0% sell tax. We aren't here to extract value; we're here to send a message. Pure meme energy.</p>
+            </div>
+            <div class="card">
+                <h3>LP Burned 🔥</h3>
+                <p>Liquidity pool tokens are burned forever. Contract renounced. Completely decentralized and community-owned.</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>$2KDI is a meme coin with no intrinsic value or expectation of financial return. Just pure vibes.</p>
+            <p style="margin-top: 10px;">© 2026 The Do Kaudi Movement.</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript for Copy Button -->
+    <script>
+        function copyCA() {
+            const caText = document.getElementById("ca").innerText;
+            navigator.clipboard.writeText(caText).then(() => {
+                const btn = document.querySelector(".copy-btn");
+                btn.innerText = "Copied!";
+                setTimeout(() => { btn.innerText = "Copy"; }, 2000);
+            });
+        }
+    </script>
+
+</body>
+</html>
